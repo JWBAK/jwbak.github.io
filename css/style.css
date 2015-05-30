@@ -12,20 +12,22 @@ body {
     text-align: center;
 }
 a:hover {
-    color: blue;
+    color: blue !important;
+	background-color: transparent;
 	text-decoration: none;
 }
 a:active {
-	color: blue;
+	color: white;
 	background-color: transparent;
 	text-decoration: none;
 }
 a:link {
+	color: white
 	background-color: transparent;
 	text-decoration: none;
 }
 a:visited {
-	color: indigo;
+	color: white;
 	background-color: transparent;
 	text-decoration: none;
 }
