@@ -16,7 +16,7 @@ h2 a {
     text-align: center;
 }
 a:hover {
-    color: blue !important;
+    color: lightslategray !important;
 	background-color: transparent;
 	text-decoration: none;
 }
