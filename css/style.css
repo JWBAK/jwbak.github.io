@@ -6,8 +6,12 @@ body {
  	-o-background-size: cover; 
  	background-size: cover;
 	color: white;
+	margin-top: 15%;
 }
-
+h2 a {
+	padding-left: 3%;
+	padding-right: 3%;
+}
 .center {
     text-align: center;
 }
