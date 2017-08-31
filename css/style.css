@@ -36,3 +36,9 @@ a:visited {
 	background-color: transparent;
 	text-decoration: none;
 }
+
+hr {
+	color: #74e0ec;
+	text-align: center;
+	width: 55%;
+}
