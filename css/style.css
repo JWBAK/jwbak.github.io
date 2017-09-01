@@ -1,3 +1,6 @@
+body {
+	background-color: #393939;
+}
 h2 a {
 	padding-left: 3%;
 	padding-right: 3%;
@@ -6,28 +9,28 @@ h2 a {
     text-align: center;
 }
 a:hover {
-    color: lightslategray;
+    color: #228FFF;
 	background-color: transparent;
 	text-decoration: none;
 }
 a:active {
-	color: white;
+	color: #26FFDD;
 	background-color: transparent;
 	text-decoration: none;
 }
 a:link {
-	color: white;
+	color: #26FFDD;
 	background-color: transparent;
 	text-decoration: none;
 }
 a:visited {
-	color: white;
+	color: #26FFDD;
 	background-color: transparent;
 	text-decoration: none;
 }
 
 hr {
-	color: #74e0ec;
+	color: #FFFFFF;
 	text-align: center;
 	width: 55%;
 }
