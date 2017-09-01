@@ -3,7 +3,7 @@ body {
 	font-family: 'Fjalla One', sans-serif;
 }
 
-.center {
+.my-name {
     text-align: center;
 }
 a:hover {
@@ -11,16 +11,8 @@ a:hover {
 	background-color: transparent;
 	text-decoration: none;
 }
-a:active {
-	color: #26FFDD;
-	background-color: transparent;
-	text-decoration: none;
-}
-a:link {
-	color: #26FFDD;
-	background-color: transparent;
-	text-decoration: none;
-}
+a:active,
+a:link,
 a:visited {
 	color: #26FFDD;
 	background-color: transparent;
