@@ -1,26 +1,32 @@
 body {
-	background-color: #393939;
+	background-image: url('../img/alaska.jpg');
 	font-family: 'Fjalla One', sans-serif;
 }
 
-.my-name {
-    text-align: center;
-}
-a:hover {
-    color: #228FFF;
-	background-color: transparent;
-	text-decoration: none;
-}
 a:active,
 a:link,
-a:visited {
-	color: #26FFDD;
-	background-color: transparent;
+a:visited,
+a:hover {
+	color: black;
 	text-decoration: none;
 }
 
 hr {
-	color: #FFFFFF;
 	text-align: center;
-	width: 55%;
+	width: 10%;
+}
+
+.my-stuff {
+		color: black;
+    text-align: center;
+}
+
+.my-name h1 {
+	font-size: 70px;
+	margin: 0;
+}
+
+.my-name h2 {
+	font-size: 40px;
+	margin: 0;
 }
