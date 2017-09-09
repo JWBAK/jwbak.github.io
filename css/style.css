@@ -1,10 +1,13 @@
 body {
+	background-color: gray;
+}
+
+.banner {
 	background-image: url('../img/alaska.jpg');
 	font-family: 'Fjalla One', sans-serif;
-	background-position: center top;
-	background-repeat: no-repeat, repeat-x, repeat;
-	width: 100%;
-	
+	background-repeat: no-repeat;
+	background-size: cover;
+
 }
 
 a:active,
@@ -36,4 +39,9 @@ hr {
 .my-name h2 {
 	font-size: 40px;
 	margin: 0;
+}
+
+.header {
+	background-color: black;
+	height: 20px;
 }
