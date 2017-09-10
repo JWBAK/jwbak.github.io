@@ -1,13 +1,9 @@
 body {
 	background-color: gray;
-}
-
-.banner {
 	background-image: url('../img/alaska.jpg');
-	font-family: 'Fjalla One', sans-serif;
 	background-repeat: no-repeat;
 	background-size: cover;
-
+	font-family: 'Fjalla One', sans-serif;
 }
 
 a:active,
