@@ -41,7 +41,12 @@ hr {
 	height: 40px;
 }
 
+.navigation {
+	text-align: right;
+	margin-right: 10%;
+}
 .navigation i {
 	color: #fff;
 	font-size: 30px;
+	padding-right: 20px;
 }
