@@ -38,6 +38,10 @@ hr {
 }
 
 .header {
-	background-color: #FFFFFF;
-	height: 20px;
+	height: 40px;
+}
+
+.navigation i {
+	color: #fff;
+	font-size: 30px;
 }
