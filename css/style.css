@@ -1,6 +1,6 @@
 body {
 	background-color: gray;
-	background-image: url('../img/alaska.jpg');
+	background-image: url('../img/background.jpg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	font-family: 'Fjalla One', sans-serif;
@@ -10,7 +10,7 @@ a:active,
 a:link,
 a:visited,
 a:hover {
-	color: black;
+	color: #FFFFFF;
 	text-decoration: none;
 }
 
@@ -20,7 +20,7 @@ hr {
 }
 
 .my-stuff {
-	color: black;
+	color: #FFFFFF;
 	text-align: center;
 	position: relative;
 	top: 50%;
@@ -38,6 +38,6 @@ hr {
 }
 
 .header {
-	background-color: black;
+	background-color: #FFFFFF;
 	height: 20px;
 }
