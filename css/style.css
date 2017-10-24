@@ -16,7 +16,7 @@ a:active,
 a:link,
 a:visited,
 a:hover {
-	color: #FFFFFF;
+	color: #fff;
 	text-decoration: none;
 }
 
@@ -51,8 +51,10 @@ hr {
 	text-align: right;
 	margin-right: 10%;
 }
-.navigation i {
+.navigation img {
 	color: #fff;
-	font-size: 30px;
+	font-size: 0px;
 	padding-right: 20px;
+    height: 40px;
+    width: 40px;
 }
