@@ -1,15 +1,16 @@
 html {
     height: 100%;
+    width: 100%;
 }
 
 body {
+    display: block;
 	font-family: 'Fjalla One', sans-serif;
     background-color: gray;
 	background-image: url('../img/background2.jpg');
 	background-repeat:no-repeat;
     background-size: cover;
     background-position:center;
-    width: auto;
 }
 
 a:active,
@@ -29,7 +30,7 @@ hr {
 	color: #fff;
 	text-align: center;
 	position: relative;
-	top: 50%;
+	top: 30%;
     text-shadow: 4px 4px #000;
 }
 
