@@ -1,16 +1,15 @@
 html {
     height: 100%;
-    width: 100%;
 }
 
 body {
-    display: block;
 	font-family: 'Fjalla One', sans-serif;
     background-color: gray;
 	background-image: url('../img/background2.jpg');
 	background-repeat:no-repeat;
     background-size: cover;
     background-position:center;
+    max-width: 1080px;
 }
 
 a:active,
@@ -25,23 +24,38 @@ hr {
 	text-align: center;
 	width: 10%;
 }
+.col-centered {
+    float: none;
+    margin: 0 auto;
+}
 
-.my-stuff {
+.my-stuff,
+.my-name {
 	color: #fff;
 	text-align: center;
-	position: relative;
-	top: 30%;
     text-shadow: 4px 4px #000;
 }
 
 .my-name h1 {
-	font-size: 70px;
+	font-size: 80px;
 	margin: 0;
 }
-
 .my-name h2 {
 	font-size: 40px;
 	margin: 0;
+}
+
+.my-stuff {
+    margin-top: 40px;
+}
+
+.about-me,
+.projects {
+    height: 350px;
+    border-radius: 4px;
+    border: 1px solid #2d3046;
+    background-color: #1c202f;
+    box-shadow: 1px 1px 10px 1px #000;
 }
 
 .header {
