@@ -30,6 +30,7 @@ hr {
 	text-align: center;
 	position: relative;
 	top: 50%;
+    text-shadow: 4px 4px #000;
 }
 
 .my-name h1 {
