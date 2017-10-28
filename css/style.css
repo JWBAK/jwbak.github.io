@@ -36,9 +36,6 @@ hr {
     text-shadow: 4px 4px #000;
 }
 
-div.about-me h1 {
-    text-transform: capitalize;
-}
 .my-name h1 {
 	font-size: 80px;
 	margin: 0;
