@@ -54,7 +54,7 @@ hr {
     height: 350px;
     border-radius: 4px;
     border: 1px solid #2d3046;
-    background-color: #1c202f;
+    background-color: #16242f;
     box-shadow: 1px 1px 10px 1px #000;
 }
 
@@ -66,10 +66,11 @@ hr {
 	text-align: right;
 	margin-right: 10%;
 }
+
 .navigation img {
 	color: #fff;
 	font-size: 0px;
 	padding-right: 20px;
-    height: 40px;
-    width: 40px;
+    height: 30px;
+    width: 30px;
 }
