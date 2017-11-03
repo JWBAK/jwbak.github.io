@@ -7,10 +7,8 @@ body {
     background-color: gray;
 	background-image: url('../img/background2.jpg');
 	background-repeat:no-repeat;
-    background-size: cover;
+    background-size: 1920px 1080px;
     background-position:center;
-    max-width: 1920px;
-    max-height: 1080px;
 }
 
 a:active,
@@ -35,11 +33,6 @@ hr {
 	color: #fff;
 	text-align: center;
     text-shadow: 4px 4px #000;
-}
-
-.my-name {
-    height: 1000px;
-    margin-top: 300px;
 }
 
 .my-name h1 {
