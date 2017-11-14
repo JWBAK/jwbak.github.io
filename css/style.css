@@ -35,6 +35,10 @@ hr {
     text-shadow: 4px 4px #000;
 }
 
+.my-name {
+    display: flex;
+    align-items: center;
+}
 .my-name h1 {
 	font-size: 80px;
 	margin: 0;
