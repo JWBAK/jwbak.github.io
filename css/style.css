@@ -76,3 +76,19 @@ a {
     height: 30px;
     width: 30px;
 }
+
+.my-name {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.my-name-top {
+	align-self: flex-start;
+}
+.my-name-middle {
+	max-width: 50%;
+}
+.my-name-bottom {
+	align-self: flex-end;
+}
