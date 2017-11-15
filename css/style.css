@@ -56,11 +56,6 @@ a {
 	height: 40px;
 }
 
-.navigation {
-	text-align: right;
-	margin-right: 10%;
-}
-
 .navigation img {
 	color: #fff;
 	font-size: 0px;
@@ -70,11 +65,12 @@ a {
 }
 
 .my-name {
-	height: 700px;
-		display: flex;
+	display: flex;
+	height: 600px;
     align-items: center;
     justify-content: center;
 }
 .my-name-alignment {
     max-width: 50%;
+	text-align: center;
 }
