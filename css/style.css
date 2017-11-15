@@ -32,7 +32,7 @@ hr {
 .my-name {
 	color: #fff;
 	text-align: center;
-    text-shadow: 4px 4px #000;
+  text-shadow: 4px 4px #000;
 }
 
 .my-name h1 {
@@ -50,14 +50,6 @@ hr {
 
 a {
     transition: all .3s ease-in-out;
-}
-.about-me,
-.projects {
-    height: 350px;
-    border-radius: 4px;
-    border: 1px solid #2d3046;
-    background-color: #16242f;
-    box-shadow: 1px 1px 10px 1px #000;
 }
 
 .header {
@@ -78,17 +70,11 @@ a {
 }
 
 .my-name {
-	display: flex;
-	align-items: center;
-	justify-content: center;
+	height: 700px;
+		display: flex;
+    align-items: center;
+    justify-content: center;
 }
-
-.my-name-top {
-	align-self: flex-start;
-}
-.my-name-middle {
-	max-width: 50%;
-}
-.my-name-bottom {
-	align-self: flex-end;
+.my-name-alignment {
+    max-width: 50%;
 }
