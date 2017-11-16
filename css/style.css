@@ -5,7 +5,9 @@ html {
 body {
 	font-family: 'Fjalla One', sans-serif;
     background-color: gray;
+	//
 	background-image: url('../img/background3.jpg');
+	//
 	background-repeat:no-repeat;
     background-size: 1920px 1080px;
     background-position:center;
@@ -28,6 +30,14 @@ hr {
     margin: 0 auto;
 }
 
+.canvas {
+		position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+}
+
 .my-stuff,
 .my-name {
 	color: #fff;
@@ -41,7 +51,8 @@ hr {
 }
 .my-name h2 {
 	font-size: 40px;
-	margin: 0;
+	margin-bottom: 10px;
+	margin-top: 0;
 }
 
 .my-stuff {
@@ -62,6 +73,7 @@ a {
 	padding-right: 20px;
     height: 30px;
     width: 30px;
+	padding-top: 30p
 }
 
 .my-name {
