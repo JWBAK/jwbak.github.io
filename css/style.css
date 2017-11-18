@@ -5,7 +5,9 @@ html {
 body {
 	font-family: 'Fjalla One', sans-serif;
     background-color: gray;
-	background-image: url('../img/background2.jpg');
+	//
+	background-image: url('../img/background3.jpg');
+	//
 	background-repeat:no-repeat;
     background-size: 1920px 1080px;
     background-position:center;
@@ -28,11 +30,19 @@ hr {
     margin: 0 auto;
 }
 
+.canvas {
+		position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100%;
+}
+
 .my-stuff,
 .my-name {
 	color: #fff;
 	text-align: center;
-    text-shadow: 4px 4px #000;
+  text-shadow: 4px 4px #000;
 }
 
 .my-name {
@@ -45,7 +55,8 @@ hr {
 }
 .my-name h2 {
 	font-size: 40px;
-	margin: 0;
+	margin-bottom: 10px;
+	margin-top: 0;
 }
 
 .my-stuff {
@@ -55,22 +66,9 @@ hr {
 a {
     transition: all .3s ease-in-out;
 }
-.about-me,
-.projects {
-    height: 350px;
-    border-radius: 4px;
-    border: 1px solid #2d3046;
-    background-color: #16242f;
-    box-shadow: 1px 1px 10px 1px #000;
-}
 
 .header {
 	height: 40px;
-}
-
-.navigation {
-	text-align: right;
-	margin-right: 10%;
 }
 
 .navigation img {
@@ -79,4 +77,16 @@ a {
 	padding-right: 20px;
     height: 30px;
     width: 30px;
+	padding-top: 30p
+}
+
+.my-name {
+	display: flex;
+	height: 600px;
+    align-items: center;
+    justify-content: center;
+}
+.my-name-alignment {
+    max-width: 50%;
+	text-align: center;
 }
