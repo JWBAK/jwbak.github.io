@@ -4,7 +4,7 @@ html {
 
 body {
 	font-family: 'Fjalla One', sans-serif;
-    background-color: #000;
+    background-color: #001;
 	background-repeat:no-repeat;
     background-size: 1920px 1080px;
     background-position:center;
@@ -28,7 +28,6 @@ hr {
 }
 
 .canvas {
-    display: block;
 position: absolute;
     top: 0;
     left: 0;
