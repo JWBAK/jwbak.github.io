@@ -31,6 +31,7 @@ hr {
 position: absolute;
     top: 0;
     left: 0;
+	z-index: -1;
 }
 
 #particles-js {
@@ -48,6 +49,7 @@ position: absolute;
 }
 
 .my-name {
+	z-index: 9999;
     display: flex;
     align-items: center;
 }
