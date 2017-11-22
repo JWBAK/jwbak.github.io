@@ -31,7 +31,6 @@ hr {
 position: absolute;
     top: 0;
     left: 0;
-	z-index: -1;
 }
 
 #particles-js {
@@ -49,7 +48,6 @@ position: absolute;
 }
 
 .my-name {
-	z-index: 9999;
     display: flex;
     align-items: center;
 }
@@ -74,7 +72,10 @@ a {
 .header {
 	height: 40px;
 }
-
+.navigation {
+	position: relative;
+	z-index: 9999;
+}
 .navigation img {
 	color: #fff;
 	font-size: 0px;
