@@ -8,7 +8,7 @@ particlesJS("particles-js", {
       }
     },
     "color": {
-      "value": "#35ffda"
+      "value": "#00eaff"
     },
     "shape": {
       "type": "circle",
@@ -21,12 +21,12 @@ particlesJS("particles-js", {
       },
       "image": {
         "src": "img/github.svg",
-        "width": 100,
-        "height": 100
+        "width": 50,
+        "height": 50
       }
     },
     "opacity": {
-      "value": 0.8,
+      "value": 1.0,
       "random": false,
       "anim": {
         "enable": true,
@@ -36,7 +36,7 @@ particlesJS("particles-js", {
       }
     },
     "size": {
-      "value": 2,
+      "value": 1.5,
       "random": true,
       "anim": {
         "enable": true,
