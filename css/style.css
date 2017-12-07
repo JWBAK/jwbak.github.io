@@ -20,7 +20,8 @@ hr {
 	width: 10%;
 }
 
-.menu {
+.header-menu {
+  text-align: center;
   color: white;
 }
 .col-centered {
