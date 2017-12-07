@@ -1,23 +1,23 @@
 html {
-    height: 100%;
+  height: 100%;
 }
 
 body {
-	font-family: 'Fjalla One', sans-serif;
-    background-color: #000;
+  font-family: 'Fjalla One', sans-serif;
+  background-color: #000;
 }
 
 a:active,
 a:link,
 a:visited,
 a:hover {
-	color: #fff;
-	text-decoration: none;
+  color: #fff;
+  text-decoration: none;
 }
 
 hr {
-	text-align: center;
-	width: 10%;
+  text-align: center;
+  width: 10%;
 }
 
 .header-menu {
@@ -25,14 +25,14 @@ hr {
   color: white;
 }
 .col-centered {
-    float: none;
-    margin: 0 auto;
+  float: none;
+  margin: 0 auto;
 }
 
 .canvas {
-position: absolute;
-    top: 0;
-    left: 0;
+  position: relative;
+  top: 0;
+  left: 0;
 }
 
 #particles-js {
@@ -44,56 +44,56 @@ position: absolute;
 
 .my-stuff,
 .my-name {
-	color: #fff;
-	text-align: center;
+  color: #fff;
+  text-align: center;
   text-shadow: 4px 4px #000;
 }
 
 .my-name {
-    display: flex;
-    align-items: center;
+  font-family: 'BioRhyme', serif;
+  align-items: center;
 }
 .my-name h1 {
-	font-size: 80px;
-	margin: 0;
+  font-size: 70px;
+  margin: 0;
 }
 .my-name h2 {
-	font-size: 40px;
-	margin-bottom: 10px;
-	margin-top: 0;
+  font-size: 40px;
+  margin-bottom: 10px;
+  margin-top: 0;
 }
 
 .my-stuff {
-    margin-top: 40px;
+  margin-top: 40px;
 }
 
 a {
-    transition: all .3s ease-in-out;
+  transition: all .3s ease-in-out;
 }
 
 .header {
-	height: 40px;
+  height: 40px;
 }
 .navigation {
-	position: relative;
-	z-index: 9999;
+  position: relative;
+  z-index: 9999;
 }
 .navigation img {
-	color: #fff;
-	font-size: 0px;
-	padding-right: 20px;
-    height: 30px;
-    width: 30px;
-	padding-top: 30p
+  color: #fff;
+  font-size: 0px;
+  padding-right: 20px;
+  height: 30px;
+  width: 30px;
+  padding-top: 30p
 }
 
 .my-name {
-	display: flex;
-	height: 600px;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  height: 600px;
+  align-items: center;
+  justify-content: center;
 }
 .my-name-alignment {
-    max-width: 50%;
-	text-align: center;
+  max-width: 50%;
+  text-align: center;
 }
