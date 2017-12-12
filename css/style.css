@@ -34,6 +34,12 @@ header a:hover {
   text-decoration: none;
 }
 
+.about-me {
+  color: white;
+  text-align: left;
+  background-color: black;
+  display: flex;
+}
 .col-centered {
   float: none;
   margin: 0 auto;
