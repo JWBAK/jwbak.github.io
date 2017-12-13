@@ -8,7 +8,7 @@ particlesJS("particles-js", {
       }
     },
     "color": {
-      "value": "#00eaff"
+      "value": ["#5baff7", "#333333", "#999999"]
     },
     "shape": {
       "type": "circle",
@@ -108,4 +108,4 @@ particlesJS("particles-js", {
   },
   "retina_detect": true
 });
-//# sourceURL=pen.js
+//# sourceURL=https://www.npmjs.com/package/isoparticles
