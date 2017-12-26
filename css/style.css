@@ -3,7 +3,7 @@ html {
 }
 
 body {
-  font-family: 'Fjalla One', sans-serif;
+  font-family: "Exo",sans-serif;
   background-color: #000;
 }
 
@@ -23,22 +23,47 @@ hr {
 /* Header & Menu Styles */
 .header-menu {
   text-align: center;
-  color: lightgray;
+  color: #5baff7;
   border-bottom: 1px solid lightgray;
 }
 header a:active,
 header a:link,
 header a:visited,
 header a:hover {
-   color: lightgray;
+   color: lightgrey;
   text-decoration: none;
 }
 
-.about-me {
-  color: white;
-  text-align: left;
-  background-color: black;
-  display: flex;
+section.about-me {
+	margin-top: 330px;
+	margin-bottom: 230px;
+	color: #fff;
+}
+
+.about-me p {
+	color: lightgray;
+}
+
+.about-me-leader {
+	font-weight: 800;
+	color: #5baff7;
+	text-transform: uppercase;
+	text-shadow: 2px 2px #000000;
+	margin-bottom: 10px;
+}
+
+.circular-picture {
+	border-radius: 70%;
+	position: relative;
+	float: right;
+	width: 100px;
+	border: 2px solid #212020;
+}
+
+.responsive-image {
+	max-width: 100%;
+	height: auto;
+	display: block;
 }
 .col-centered {
   float: none;
@@ -51,14 +76,14 @@ header a:hover {
 
 #particles-js {
   position: absolute;
-  width: 100%;
-  height: 100%;
+	width: 100%;
+	height: 875px;
 }
 
 
 .my-stuff,
 .my-name {
-  color: #fff;
+  color: lightgrey;
   text-align: center;
   text-shadow: 4px 4px #000;
 }
@@ -94,7 +119,7 @@ a {
   z-index: 9999;
 }
 .navigation img {
-  color: #fff;
+  color: lightgray;
   font-size: 0px;
   padding-right: 20px;
   height: 30px;
@@ -107,6 +132,13 @@ a {
   height: 600px;
   align-items: center;
   justify-content: center;
+}
+
+.my-name .name {
+	color: #5baff7
+}
+.my-name .profession {
+	color: lightgray;
 }
 .my-name-alignment {
   max-width: 50%;
