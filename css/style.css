@@ -23,7 +23,7 @@ hr {
 /* Header & Menu Styles */
 .header-menu {
   text-align: center;
-  color: #5baff7;
+  color: lightgray;
   border-bottom: 1px solid lightgray;
 }
 header a:active,
@@ -135,7 +135,7 @@ a {
 }
 
 .my-name .name {
-	color: #5baff7
+	color: lightgray;
 }
 .my-name .profession {
 	color: lightgray;
