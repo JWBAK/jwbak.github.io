@@ -1,19 +1,23 @@
 html, body {
 	height: 100%;
 	max-width: 100%;
-	width: 1600px;
+	width: 1400px;
 	background-color: gray;
 	margin-left: auto;
 	margin-right: auto;
 	font-family: 'Roboto', sans-serif;
 }
 
-
-
 header {
 	height: 150px;
 	text-align: right;
 	color: #fff;
+}
+
+hr {
+	height: 2px;
+	color: #fff;
+	background: #fff;
 }
 
 .social-icons img {
