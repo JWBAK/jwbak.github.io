@@ -1,8 +1,8 @@
 html, body {
 	height: 100%;
 	max-width: 100%;
-	width: 1400px;
-	background-color: gray;
+	width: 1200px;
+	background-color: #203248;
 	margin-left: auto;
 	margin-right: auto;
 	font-family: 'Roboto', sans-serif;
@@ -12,17 +12,22 @@ header {
 	height: 150px;
 	text-align: right;
 	color: #fff;
+	text-shadow: 2px 1px black;
 }
 
 hr {
 	height: 2px;
 	color: #fff;
 	background: #fff;
+	margin: 0;
 }
 
 .social-icons img {
 	height: 48px;
 	width: 48px;
+	text-shadow: 2px 1px black;
+	margin-bottom: 10px;
+	margin-top: 5px;
 }
 
 .navigation-link {
@@ -39,4 +44,9 @@ hr {
 
 .profession {
 	font-size: 40px;
+}
+
+.main-image {
+	width: 100%;
+	margin-top: 20px;
 }
