@@ -3,7 +3,7 @@ html, body {
 	height: 100%;
 	max-width: 100%;
 	width: 1200px;
-	background-color: #203248;
+	background-color: #182029;
 	margin-left: auto;
 	margin-right: auto;
 	font-family: 'Roboto', sans-serif;
@@ -21,11 +21,22 @@ hr {
 	box-shadow: 2px 1px black;
 }
 
+/*Hyperlink Styling*/
+a:link, a:visited {
+	color: #9494d4;
+}
+
+a:hover {
+	color: lightgray;
+}
+
+
+
 /*Header - Socials Styling*/
 .social-icons img {
 	height: 40px;
 	width: 40px;
-	text-shadow: 2px 1px black;
+	text-shadow: 2px 2px black;
 }
 .navigation-link {
 	text-decoration: none;
@@ -45,15 +56,20 @@ hr {
 	width: 100%;
 }
 
-/*Featured Work - Projects Styling*/
+/*Portfolio - Projects Styling*/
 .work-title {
 	font-size: 35px;
 	color: #fff;
-	text-shadow: 2px 1px black;
+	text-shadow: 2px 2px black;
+	margin-left: 3%;
 }
 
 .projects-container {
 	width: 100%;
+	margin-bottom: 30px;
+	text-align: center;
+	color: #fff;
+	text-decoration: none;
 }
 
 .project-1, .project-2, .project-3 {
@@ -62,4 +78,8 @@ hr {
 
 .projects-container img {
 	max-width: 100%;
+}
+
+.projects-container h3 {
+	text-shadow: 2px 2px black;
 }
