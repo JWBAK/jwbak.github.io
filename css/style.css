@@ -12,6 +12,7 @@ header {
 	text-align: right;
 	text-shadow: 2px 1px black;
 	color: #fff;
+	display: flex;
 }
 hr {
 	height: 2px;
@@ -23,7 +24,7 @@ hr {
 
 /*Hyperlink Styling*/
 a:link, a:visited {
-	color: #9494d4;
+	color: #fff;
 }
 
 a:hover {
@@ -85,7 +86,15 @@ a:hover {
 	max-width: 100%;
 }
 
-.projects-container h3 {
+.projects-container p {
 	text-shadow: 2px 2px black;
-	margin-bottom: 0;
+	margin-bottom: 5px;
+}
+
+.logo {
+	text-align: left;
+}
+
+.logo, .title-info {
+	width: 50%;
 }
