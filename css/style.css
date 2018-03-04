@@ -1,3 +1,4 @@
+/*Overarching Styles*/
 html, body {
 	height: 100%;
 	max-width: 100%;
@@ -7,46 +8,58 @@ html, body {
 	margin-right: auto;
 	font-family: 'Roboto', sans-serif;
 }
-
 header {
-	height: 150px;
 	text-align: right;
 	color: #fff;
 	text-shadow: 2px 1px black;
 }
-
 hr {
 	height: 2px;
 	color: #fff;
 	background: #fff;
-	margin: 0;
+	margin-bottom: 20px;
+	box-shadow: 2px 1px black;
 }
 
+/*Header - Socials Styling*/
 .social-icons img {
-	height: 48px;
-	width: 48px;
+	height: 40px;
+	width: 40px;
 	text-shadow: 2px 1px black;
-	margin-bottom: 10px;
-	margin-top: 5px;
 }
-
 .navigation-link {
 	text-decoration: none;
 }
-
 .name, .profession {
 	margin: 0;
 }
-
 .name {
 	font-size: 65px;
 }
-
 .profession {
-	font-size: 40px;
+	font-size: 30px;
 }
 
+/*Main Block Image*/
 .main-image {
 	width: 100%;
-	margin-top: 20px;
+}
+
+/*Featured Work - Projects Styling*/
+.work-title {
+	font-size: 35px;
+	color: #fff;
+	text-shadow: 2px 1px black;
+}
+
+.projects-container {
+	width: 100%;
+}
+
+.project-1, .project-2, .project-3 {
+	width: 33.3%;
+}
+
+.projects-container img {
+	max-width: 100%;
 }
