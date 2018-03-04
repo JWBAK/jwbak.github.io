@@ -10,8 +10,8 @@ html, body {
 }
 header {
 	text-align: right;
-	color: #fff;
 	text-shadow: 2px 1px black;
+	color: #fff;
 }
 hr {
 	height: 2px;
@@ -46,6 +46,7 @@ a:hover {
 }
 .name {
 	font-size: 65px;
+	color: #368ae0;
 }
 .profession {
 	font-size: 30px;
@@ -59,7 +60,7 @@ a:hover {
 /*Portfolio - Projects Styling*/
 .work-title {
 	font-size: 35px;
-	color: #fff;
+	color: #368ae0;
 	text-shadow: 2px 2px black;
 	margin-left: 3%;
 }
@@ -68,12 +69,16 @@ a:hover {
 	width: 100%;
 	margin-bottom: 30px;
 	text-align: center;
-	color: #fff;
+	color: #368ae0;
 	text-decoration: none;
+	display: flex;
+	flex-wrap: wrap;
 }
 
 .project-1, .project-2, .project-3 {
-	width: 33.3%;
+	width: 33%;
+	margin-left: 2px;
+	margin-right: 2px;
 }
 
 .projects-container img {
@@ -82,4 +87,5 @@ a:hover {
 
 .projects-container h3 {
 	text-shadow: 2px 2px black;
+	margin-bottom: 0;
 }
