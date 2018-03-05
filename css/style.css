@@ -8,12 +8,14 @@ html, body {
 	margin-right: auto;
 	font-family: 'Roboto', sans-serif;
 }
+
 header {
 	text-align: right;
 	text-shadow: 2px 1px black;
 	color: #fff;
 	display: flex;
 }
+
 hr {
 	height: 2px;
 	color: #fff;
@@ -39,16 +41,20 @@ a:hover {
 	width: 40px;
 	text-shadow: 2px 2px black;
 }
+
 .navigation-link {
 	text-decoration: none;
 }
+
 .name, .profession {
 	margin: 0;
 }
+
 .name {
 	font-size: 65px;
 	color: #fff;
 }
+
 .profession {
 	font-size: 30px;
 	padding-bottom: 10px;
@@ -82,8 +88,7 @@ a:hover {
 
 .project-1, .project-2, .project-3 {
 	width: 33%;
-	margin-left: 2px;
-	margin-right: 2px;
+	margin: 0 0 2px 2px;
 }
 
 .projects-container img {
@@ -102,6 +107,7 @@ a:hover {
 .logo, .title-info {
 	width: 50%;
 }
+
 
 /* - Media Queries | Small Devices - */
 @media screen and (max-width: 450px) {
@@ -137,9 +143,7 @@ a:hover {
 
 	.project-1, .project-2, .project-3 {
 		width: 90%;
-		margin-bottom: 15px;
-		margin-left: auto;
-		margin-right: auto;
+		margin: 0 15px auto auto;
 	}
 
 	.work-title {
@@ -184,9 +188,7 @@ a:hover {
 
 	.project-1, .project-2, .project-3 {
 		width: 90%;
-		margin-bottom: 55px;
-		margin-left: auto;
-		margin-right: auto;
+		margin-bottom: 0 55px auto auto;
 	}
 
 	.work-title {
@@ -202,6 +204,7 @@ a:hover {
 		width: 35%;
 	}
 }
+
 
 /* - Media Queries | Desktop Devices + Larger - */
 @media screen and (min-width: 801px) and (max-width: 1200px) {
@@ -230,9 +233,7 @@ a:hover {
 
 	.project-1, .project-2, .project-3 {
 		width: 90%;
-		margin-bottom: 55px;
-		margin-left: auto;
-		margin-right: auto;
+		margin-bottom: 0 55px auto auto;
 	}
 
 	.work-title {
