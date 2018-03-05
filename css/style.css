@@ -1,4 +1,4 @@
-/*Overarching Styles*/
+/* - Overarching Styles - */
 html, body {
 	height: 100%;
 	max-width: 100%;
@@ -22,7 +22,8 @@ hr {
 	box-shadow: 2px 1px black;
 }
 
-/*Hyperlink Styling*/
+
+/* - Hyperlink Styling - */
 a:link, a:visited {
 	color: #fff;
 }
@@ -32,8 +33,7 @@ a:hover {
 }
 
 
-
-/*Header - Socials Styling*/
+/* - Header | Socials Styling - */
 .social-icons img {
 	height: 40px;
 	width: 40px;
@@ -47,22 +47,25 @@ a:hover {
 }
 .name {
 	font-size: 65px;
-	color: #368ae0;
+	color: #fff;
 }
 .profession {
 	font-size: 30px;
 	padding-bottom: 10px;
+	color: #fff;
 }
 
-/*Main Block Image*/
+
+/* - Main Block Image - */
 .main-image {
 	width: 100%;
 }
 
-/*Portfolio - Projects Styling*/
+
+/* - Portfolio | Projects Styling - */
 .work-title {
 	font-size: 35px;
-	color: #368ae0;
+	color: #fff;
 	text-shadow: 2px 2px black;
 	margin-left: 3%;
 }
@@ -71,7 +74,7 @@ a:hover {
 	width: 100%;
 	margin-bottom: 30px;
 	text-align: center;
-	color: #368ae0;
+	color: #fff;
 	text-decoration: none;
 	display: flex;
 	flex-wrap: wrap;
@@ -98,4 +101,150 @@ a:hover {
 
 .logo, .title-info {
 	width: 50%;
+}
+
+/* - Media Queries | Small Devices - */
+@media screen and (max-width: 450px) {
+	header {
+		text-align: center;
+		display: block;
+	}
+
+	hr, .main-block {
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.logo, .title-info {
+		text-align: center;
+		width: auto;
+	}
+
+	.name {
+		font-size: 50px;
+	}
+
+	.profession {
+		font-size: 25px;
+	}
+
+	.projects-container {
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.project-1, .project-2, .project-3 {
+		width: 90%;
+		margin-bottom: 15px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.work-title {
+		text-align: center;
+		margin-left: 0;
+	}
+}
+
+
+/* - Media Queries | Medium Devices - */
+@media screen and (min-width: 451px) and (max-width: 800px) {
+	header {
+		width: 90%;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	hr, .main-block {
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.logo, .title-info {
+		text-align: right;
+		width: 50%;
+	}
+
+	.name {
+		font-size: 40px;
+	}
+
+	.profession {
+		font-size: 20px;
+	}
+
+	.projects-container {
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.project-1, .project-2, .project-3 {
+		width: 90%;
+		margin-bottom: 55px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.work-title {
+		text-align: center;
+		margin-left: 0;
+	}
+
+	.logo {
+		text-align: left;
+	}
+
+	.logo img {
+		width: 35%;
+	}
+}
+
+/* - Media Queries | Desktop Devices + Larger - */
+@media screen and (min-width: 801px) and (max-width: 1200px) {
+	header {
+		width: 90%;
+		margin-right: auto;
+		margin-left: auto;
+	}
+
+	hr, .main-block {
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.logo, .title-info {
+		text-align: right;
+		width: 50%;
+	}
+
+	.projects-container {
+		width: 90%;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.project-1, .project-2, .project-3 {
+		width: 90%;
+		margin-bottom: 55px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.work-title {
+		text-align: center;
+		margin-left: 0;
+	}
+
+	.logo {
+		text-align: left;
+	}
+
+	.logo img {
+		width: 35%;
+	}
 }
