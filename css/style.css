@@ -97,7 +97,8 @@ a:hover {
 
 .projects-container p {
 	text-shadow: 2px 2px black;
-	margin-bottom: 5px;
+	margin: 5px;
+	font-size: 25px;
 }
 
 .logo {
@@ -143,7 +144,9 @@ a:hover {
 
 	.project-1, .project-2, .project-3 {
 		width: 90%;
-		margin: 0 15px auto auto;
+		margin-bottom: 15px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.work-title {
@@ -188,7 +191,9 @@ a:hover {
 
 	.project-1, .project-2, .project-3 {
 		width: 90%;
-		margin-bottom: 0 55px auto auto;
+		margin-bottom: 55px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.work-title {
@@ -233,7 +238,9 @@ a:hover {
 
 	.project-1, .project-2, .project-3 {
 		width: 90%;
-		margin-bottom: 0 55px auto auto;
+		margin-bottom: 55px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 
 	.work-title {
