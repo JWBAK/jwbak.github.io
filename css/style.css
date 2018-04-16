@@ -3,13 +3,12 @@ html, body {
 	height: 100%;
 	max-width: 100%;
 	width: 1200px;
-	background-color: #182029;
 	margin-left: auto;
 	margin-right: auto;
 	font-family: 'Roboto', sans-serif;
 
 	/* Location of the image */
-	background-image: url(img/background.png);
+	background-image: url(/img/background.png);
   
 	/* Background image is centered vertically and horizontally at all times */
 	background-position: center center;
@@ -24,6 +23,7 @@ html, body {
 	/* This is what makes the background image rescale based
 	   on the container's size */
 	background-size: cover;
+	background-color: #182029;
 	
 }
 
