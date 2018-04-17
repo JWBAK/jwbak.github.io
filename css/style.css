@@ -30,7 +30,7 @@ header {
 
 hr {
 	height: 2px;
-	color: #fff;
+	color: #c5c5c5;
 	background: #fff;
 	margin-bottom: 20px;
 	box-shadow: 2px 1px black;
@@ -64,7 +64,7 @@ a:hover {
 
 .name {
 	font-size: 65px;
-	color: #58a9ff;
+	color: #c5c5c5;
 }
 
 .profession {
@@ -83,7 +83,7 @@ a:hover {
 /* - Portfolio | Projects Styling - */
 .work-title {
 	font-size: 35px;
-	color: #fff;
+	color: #c5c5c5;
 	text-shadow: 2px 2px black;
 	margin-left: 3%;
 }
@@ -111,6 +111,7 @@ a:hover {
 	text-shadow: 2px 2px black;
 	margin: 5px;
 	font-size: 25px;
+	color: #c5c5c5;
 }
 
 .logo {
@@ -132,7 +133,7 @@ a:hover {
    .portfolio:hover {
 	box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
    }
-   
+
 /* Professional Account Links */
    .portfolio-link {
 	border-radius: 3px;
