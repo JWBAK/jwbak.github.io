@@ -24,7 +24,7 @@ function makeGrid() {
 	}
   
   //Adds eventListener for user color selection to Entire Grid, instead of each individual pixel.
-  mainGrid.addEventListener('mouseup', function(event) {
+  mainGrid.addEventListener('mousedown', function(event) {
     const colorSelection = document.querySelector('#colorPicker').value;
     event.target.style.cssText = "background-color: "+ colorSelection;
   });
