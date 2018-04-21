@@ -7,7 +7,7 @@ html, body {
 	margin-right: auto;
 	font-family: 'Exo 2', sans-serif;
 	/* Location of the image */
-	background-image: url("../img/background.jpeg");
+	background-image: url("../img/background.png");
 	/* Background image is centered vertically and horizontally at all times */
 	background-position: center center;
 	/* Background image doesn't tile */
@@ -64,7 +64,7 @@ a:hover {
 
 .name {
 	font-size: 65px;
-	color: #c5c5c5;
+	color: #449fff;
 }
 
 .profession {
@@ -83,7 +83,7 @@ a:hover {
 /* - Portfolio | Projects Styling - */
 .work-title {
 	font-size: 35px;
-	color: #c5c5c5;
+	color: #449fff;
 	text-shadow: 2px 2px black;
 	margin-left: 3%;
 }
@@ -111,7 +111,7 @@ a:hover {
 	text-shadow: 2px 2px black;
 	margin: 5px;
 	font-size: 25px;
-	color: #c5c5c5;
+	color: #fff;
 }
 
 .logo {
