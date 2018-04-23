@@ -17,6 +17,14 @@ let cardsDeck = [],
     });
 
 
+    // let cards = document.querySelectorAll("li.card");
+
+
+    //  cards.addEventListener('click', function(event) {
+    //     event.target.classList.add('open');
+    //     event.target.classList.add('show');
+    // });
+
 /*
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
