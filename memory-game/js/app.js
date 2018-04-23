@@ -39,7 +39,6 @@ function shuffle(array) {
 
 // shuffles the order of the cards to begin.
 shuffle(card_names);
-
 // clears deck to start before redrawing.
 const deck = document.getElementById('mainDeck');
 // Remove ChildrenNodes - StackOverflow --> https://bit.ly/2Hmw67R
@@ -61,8 +60,8 @@ for (let i = 0; i < card_names.length; i++) {
 
 // adds click eventListener to <ul> rather than each individual card.
 deck.addEventListener('click', function(event) {
-    event.target.classList.toggle('open');
-    event.target.classList.toggle('show');
+    event.target.classList.add('open');
+    event.target.classList.add('show');
 });
 
     
@@ -90,3 +89,5 @@ deck.addEventListener('click', function(event) {
 
 // reload game 
 let reset_button = document.querySelector('.restart');
+
+
