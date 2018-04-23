@@ -40,7 +40,7 @@ function shuffle(array) {
 // shuffles the order of the cards to begin.
 shuffle(card_names);
 
-// clears 
+// clears deck to start before redrawing.
 const deck = document.getElementById('mainDeck');
 // Remove ChildrenNodes - StackOverflow --> https://bit.ly/2Hmw67R
 while(deck.hasChildNodes() ){
