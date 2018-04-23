@@ -59,6 +59,7 @@ for (let i = 0; i < card_names.length; i++) {
     const addNewCard = deck.appendChild(newCard);
 }
 
+// adds click eventListener to <ul> rather than each individual card.
 deck.addEventListener('click', function(event) {
     event.target.classList.toggle('open');
     event.target.classList.toggle('show');
