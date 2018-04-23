@@ -17,15 +17,6 @@ let card_names = ["fa fa-diamond", "fa fa-paper-plane-o", "fa fa-anchor", "fa fa
         event.target.classList.toggle('show');
     });
 
-
-    // let cards = document.querySelectorAll("li.card");
-
-
-    //  cards.addEventListener('click', function(event) {
-    //     event.target.classList.add('open');
-    //     event.target.classList.add('show');
-    // });
-
 /*
  * Display the cards on the page
  *   - shuffle the list of cards using the provided "shuffle" method below
@@ -48,6 +39,7 @@ function shuffle(array) {
     return array;
 }
 
+shuffle(card_names);
 
 /*
  * set up the event listener for a card. If a card is clicked:
