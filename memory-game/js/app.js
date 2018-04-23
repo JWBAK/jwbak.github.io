@@ -4,11 +4,14 @@
 let cardsDeck = [],
     openCards = [],
     moveCount = 0,
-    matchPairs = 0;
+    matchedPairs = 0,
+    game_started = false;
+
 
     let card = document.querySelector('.card');
 
-     card.addEventListener('mousedown', function(event) {
+
+     card.addEventListener('click', function(event) {
         event.target.classList.add('open');
         event.target.classList.add('show');
     });
