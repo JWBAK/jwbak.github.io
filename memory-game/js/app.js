@@ -9,12 +9,7 @@ let card_names = ["fa fa-diamond", "fa fa-paper-plane-o", "fa fa-anchor", "fa fa
     game_started = false;
 
 
-    let card = document.querySelector('.card');
-
-     card.addEventListener('click', function(event) {
-        event.target.classList.toggle('open');
-        event.target.classList.toggle('show');
-    });
+    
 
 /*
  * Display the cards on the page
@@ -42,23 +37,32 @@ function shuffle(array) {
 
 //StartGame()
 
-
 shuffle(card_names);
+
 const deck = document.getElementById('mainDeck');
+
 // Remove ChildrenNodes - StackOverflow --> https://bit.ly/2Hmw67R
 while(deck.hasChildNodes() ){
     deck.removeChild(deck.lastChild);
 }
 
     for (let i = 0; i < card_names.length; i++) {
-
         const newCard = document.createElement('li');
+        newCard.className = "card";
         const newCardData = document.createElement('i');
-        
+        newCardData.className = card_names[i];
+
         const addNewCardData = newCard.appendChild(newCardData);
         const addNewCard = deck.appendChild(newCard);
-
+        
     }
+
+    let card = document.querySelector('.card');
+
+     card.addEventListener('click', function(event) {
+        event.target.classList.toggle('open');
+        event.target.classList.toggle('show');
+    });
 
     
 
