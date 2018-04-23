@@ -11,7 +11,6 @@ let card_names = ["fa fa-diamond", "fa fa-paper-plane-o", "fa fa-anchor", "fa fa
 
     let card = document.querySelector('.card');
 
-
      card.addEventListener('click', function(event) {
         event.target.classList.toggle('open');
         event.target.classList.toggle('show');
@@ -24,6 +23,8 @@ let card_names = ["fa fa-diamond", "fa fa-paper-plane-o", "fa fa-anchor", "fa fa
  *   - add each card's HTML to the page
  */
 
+
+
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
     var currentIndex = array.length, temporaryValue, randomIndex;
@@ -35,11 +36,31 @@ function shuffle(array) {
         array[currentIndex] = array[randomIndex];
         array[randomIndex] = temporaryValue;
     }
-
     return array;
 }
 
+
+//StartGame()
+
+
 shuffle(card_names);
+const deck = document.getElementById('mainDeck');
+// Remove ChildrenNodes - StackOverflow --> https://bit.ly/2Hmw67R
+while(deck.hasChildNodes() ){
+    deck.removeChild(deck.lastChild);
+}
+
+    for (let i = 0; i < card_names.length; i++) {
+
+        const newCard = document.createElement('li');
+        const newCardData = document.createElement('i');
+        
+        const addNewCardData = newCard.appendChild(newCardData);
+        const addNewCard = deck.appendChild(newCard);
+
+    }
+
+    
 
 /*
  * set up the event listener for a card. If a card is clicked:
