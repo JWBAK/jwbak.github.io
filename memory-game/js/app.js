@@ -9,9 +9,9 @@ let cardsDeck = [],
     let card = document.querySelector('.card');
 
      card.addEventListener('mousedown', function(event) {
-    event.target.classList.add('open');
-    event.target.classList.add('show');
-  });
+        event.target.classList.add('open');
+        event.target.classList.add('show');
+    });
 
 
 /*
