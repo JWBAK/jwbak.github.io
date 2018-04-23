@@ -57,12 +57,12 @@ for (let i = 0; i < card_names.length; i++) {
 
     const addNewCardData = newCard.appendChild(newCardData);
     const addNewCard = deck.appendChild(newCard);
-
-    newCard.addEventListener('click', function(event) {
-        event.target.classList.toggle('open');
-        event.target.classList.toggle('show');
-    });
 }
+
+deck.addEventListener('click', function(event) {
+    event.target.classList.toggle('open');
+    event.target.classList.toggle('show');
+});
 
     
 
