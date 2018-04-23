@@ -37,16 +37,19 @@ function shuffle(array) {
 
 //StartGame()
 
+// shuffles the order of the cards to begin.
 shuffle(card_names);
 
+// clears 
 const deck = document.getElementById('mainDeck');
-
 // Remove ChildrenNodes - StackOverflow --> https://bit.ly/2Hmw67R
 while(deck.hasChildNodes() ){
     deck.removeChild(deck.lastChild);
 }
 
+// Loops through the card_names array and recreates the card elements on the page.
     for (let i = 0; i < card_names.length; i++) {
+
         const newCard = document.createElement('li');
         newCard.className = "card";
         const newCardData = document.createElement('i');
@@ -54,15 +57,20 @@ while(deck.hasChildNodes() ){
 
         const addNewCardData = newCard.appendChild(newCardData);
         const addNewCard = deck.appendChild(newCard);
+
+        newCard.addEventListener('click', function(event) {
+            event.target.classList.toggle('open');
+            event.target.classList.toggle('show');
+        });
         
     }
 
-    let card = document.querySelector('.card');
+    
 
-     card.addEventListener('click', function(event) {
-        event.target.classList.toggle('open');
-        event.target.classList.toggle('show');
-    });
+    //  card.addEventListener('click', function(event) {
+    //     event.target.classList.toggle('open');
+    //     event.target.classList.toggle('show');
+    // });
 
     
 
