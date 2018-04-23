@@ -48,22 +48,21 @@ while(deck.hasChildNodes() ){
 }
 
 // Loops through the card_names array and recreates the card elements on the page.
-    for (let i = 0; i < card_names.length; i++) {
+for (let i = 0; i < card_names.length; i++) {
 
-        const newCard = document.createElement('li');
-        newCard.className = "card";
-        const newCardData = document.createElement('i');
-        newCardData.className = card_names[i];
+    const newCard = document.createElement('li');
+    newCard.className = "card";
+    const newCardData = document.createElement('i');
+    newCardData.className = card_names[i];
 
-        const addNewCardData = newCard.appendChild(newCardData);
-        const addNewCard = deck.appendChild(newCard);
+    const addNewCardData = newCard.appendChild(newCardData);
+    const addNewCard = deck.appendChild(newCard);
 
-        newCard.addEventListener('click', function(event) {
-            event.target.classList.toggle('open');
-            event.target.classList.toggle('show');
-        });
-        
-    }
+    newCard.addEventListener('click', function(event) {
+        event.target.classList.toggle('open');
+        event.target.classList.toggle('show');
+    });
+}
 
     
 
