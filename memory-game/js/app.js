@@ -13,8 +13,7 @@ let card_names = ["fa fa-diamond", "fa fa-paper-plane-o", "fa fa-anchor", "fa fa
 
 
      card.addEventListener('click', function(event) {
-        event.target.classList.add('open');
-        event.target.classList.add('show');
+        event.target.classList.add('open', 'show');
     });
 
 
