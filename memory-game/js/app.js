@@ -1,9 +1,17 @@
 /*
  * Create a list that holds all of your cards
  */
-let cardDeck = [],
+let cardsDeck = [],
+    openCards = [],
     moveCount = 0,
-    matchPairs = 0,
+    matchPairs = 0;
+
+    let card = document.querySelector('.card');
+
+     card.addEventListener('mousedown', function(event) {
+    event.target.classList.add('open');
+    event.target.classList.add('show');
+  });
 
 
 /*
@@ -41,7 +49,7 @@ function shuffle(array) {
  */
 
 //  increasing move counter
-span .moves .innerHtml ++
+// span .moves .innerHtml ++
 
 // reload game 
-restart()
+// restart()
