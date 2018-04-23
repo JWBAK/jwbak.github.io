@@ -1,10 +1,11 @@
 /*
  * Create a list that holds all of your cards
  */
-let cardsDeck = [],
-    openCards = [],
-    moveCount = 0,
-    matchedPairs = 0,
+let card_names = ["fa fa-diamond", "fa fa-paper-plane-o", "fa fa-anchor", "fa fa-bolt", "fa fa-cube", "fa fa-anchor", "fa fa-leaf", "fa fa-bicycle", "fa fa-diamond", "fa fa-bomb", "fa fa-leaf", "fa fa-bomb", "fa fa-bolt", "fa fa-bicycle", "fa fa-paper-plane-o", "fa fa-cube"],
+    open_cards = [],
+    card_deck = [],
+    move_count = 0,
+    matched_pairs = 0,
     game_started = false;
 
 
@@ -63,4 +64,4 @@ function shuffle(array) {
 // span .moves .innerHtml ++
 
 // reload game 
-// restart()
+let reset_button = document.querySelector('.restart');
