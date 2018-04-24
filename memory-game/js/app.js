@@ -8,6 +8,8 @@ let card_names = ["fa fa-diamond", "fa fa-paper-plane-o", "fa fa-anchor", "fa fa
     matched_pairs = 0,
     game_started = false;
 
+const deck = document.getElementById('mainDeck');
+const reset_button = document.querySelector('.restart');
 
     
 
@@ -17,6 +19,27 @@ let card_names = ["fa fa-diamond", "fa fa-paper-plane-o", "fa fa-anchor", "fa fa
  *   - loop through each card and create its HTML
  *   - add each card's HTML to the page
  */
+
+// shuffles the order of the cards to begin.
+shuffle(card_names);
+
+// clears deck to start before redrawing.
+// Remove ChildrenNodes - StackOverflow --> https://bit.ly/2Hmw67R
+while(deck.hasChildNodes() ){
+    deck.removeChild(deck.lastChild);
+}
+
+// Loops through the card_names array and recreates the card elements on the page.
+for (let i = 0; i < card_names.length; i++) {
+
+    const newCard = document.createElement('li');
+    newCard.className = "card";
+    const newCardData = document.createElement('i');
+    newCardData.className = card_names[i];
+
+    const addNewCardData = newCard.appendChild(newCardData);
+    const addNewCard = deck.appendChild(newCard);
+}
 
 
 
@@ -34,29 +57,6 @@ function shuffle(array) {
     return array;
 }
 
-
-//StartGame()
-
-// shuffles the order of the cards to begin.
-shuffle(card_names);
-// clears deck to start before redrawing.
-const deck = document.getElementById('mainDeck');
-// Remove ChildrenNodes - StackOverflow --> https://bit.ly/2Hmw67R
-while(deck.hasChildNodes() ){
-    deck.removeChild(deck.lastChild);
-}
-
-// Loops through the card_names array and recreates the card elements on the page.
-for (let i = 0; i < card_names.length; i++) {
-
-    const newCard = document.createElement('li');
-    newCard.className = "card";
-    const newCardData = document.createElement('i');
-    newCardData.className = card_names[i];
-
-    const addNewCardData = newCard.appendChild(newCardData);
-    const addNewCard = deck.appendChild(newCard);
-}
 
 // adds click eventListener to <ul> rather than each individual card.
 deck.addEventListener('click', function(event) {
@@ -87,7 +87,6 @@ deck.addEventListener('click', function(event) {
 //  increasing move counter
 // span .moves .innerHtml ++
 
-// reload game 
-let reset_button = document.querySelector('.restart');
+//
 
 
