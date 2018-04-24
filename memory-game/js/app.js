@@ -87,6 +87,7 @@ deck.addEventListener('click', function(event) {
 //  increasing move counter
 // span .moves .innerHtml ++
 
-//
+//classes for code
+// open, show, match
 
 
