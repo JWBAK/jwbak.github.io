@@ -40,6 +40,7 @@ function shuffle(array) {
 
 // adds click eventListener to <ul> rather than each individual card.
 deck.addEventListener('click', function(event) {
+    move_count += 1;
     event.target.classList.add('open');
     event.target.classList.add('show');
 
