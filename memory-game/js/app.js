@@ -11,7 +11,7 @@ let card_names = ["fa fa-diamond", "fa fa-paper-plane-o", "fa fa-anchor", "fa fa
 const deck = document.getElementById('mainDeck');
 const reset_button = document.querySelector('.restart');
 
-    
+reset_button.addEventListener('click', playGame);
 
 /*
  * Display the cards on the page
@@ -19,27 +19,7 @@ const reset_button = document.querySelector('.restart');
  *   - loop through each card and create its HTML
  *   - add each card's HTML to the page
  */
-
-// shuffles the order of the cards to begin.
-shuffle(card_names);
-
-// clears deck to start before redrawing.
-// Remove ChildrenNodes - StackOverflow --> https://bit.ly/2Hmw67R
-while(deck.hasChildNodes() ){
-    deck.removeChild(deck.lastChild);
-}
-
-// Loops through the card_names array and recreates the card elements on the page.
-for (let i = 0; i < card_names.length; i++) {
-
-    const newCard = document.createElement('li');
-    newCard.className = "card";
-    const newCardData = document.createElement('i');
-    newCardData.className = card_names[i];
-
-    const addNewCardData = newCard.appendChild(newCardData);
-    const addNewCard = deck.appendChild(newCard);
-}
+playGame();
 
 
 
@@ -62,7 +42,13 @@ function shuffle(array) {
 deck.addEventListener('click', function(event) {
     event.target.classList.add('open');
     event.target.classList.add('show');
+
+    setTimeout( function() {
+        event.target.classList.remove('open');
+        event.target.classList.remove('show');
+    }, 1750);
 });
+
 
     
 
@@ -89,5 +75,34 @@ deck.addEventListener('click', function(event) {
 
 //classes for code
 // open, show, match
+
+// Reset Game
+reset_button.addEventListener('click', playGame);
+
+
+
+
+function playGame() {
+    // shuffles the order of the cards to begin.
+    shuffle(card_names);
+
+    // clears deck to start before redrawing.
+    // Remove ChildrenNodes - StackOverflow --> https://bit.ly/2Hmw67R
+    while(deck.hasChildNodes() ){
+        deck.removeChild(deck.lastChild);
+    }
+
+    // Loops through the card_names array and recreates the card elements on the page.
+    for (let i = 0; i < card_names.length; i++) {
+
+        const newCard = document.createElement('li');
+        newCard.className = "card";
+        const newCardData = document.createElement('i');
+        newCardData.className = card_names[i];
+
+        const addNewCardData = newCard.appendChild(newCardData);
+        const addNewCard = deck.appendChild(newCard);
+    }
+}
 
 
