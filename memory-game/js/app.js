@@ -10,6 +10,7 @@ let card_names = ["fa fa-diamond", "fa fa-paper-plane-o", "fa fa-anchor", "fa fa
 
 const deck = document.getElementById('mainDeck');
 const reset_button = document.querySelector('.restart');
+let moves = document.querySelector('.moves');
 
 reset_button.addEventListener('click', playGame);
 
@@ -41,13 +42,17 @@ function shuffle(array) {
 // adds click eventListener to <ul> rather than each individual card.
 deck.addEventListener('click', function(event) {
     move_count += 1;
+    moves.innerHTML = move_count;
+
     event.target.classList.add('open');
     event.target.classList.add('show');
 
     setTimeout( function() {
         event.target.classList.remove('open');
         event.target.classList.remove('show');
-    }, 1750);
+    }, 1150);
+
+    console.log(event.target);
 });
 
 
@@ -86,6 +91,10 @@ reset_button.addEventListener('click', playGame);
 function playGame() {
     // shuffles the order of the cards to begin.
     shuffle(card_names);
+
+    //Resets the move counter and displayed number of moves.
+    move_count = 0;
+    moves.innerHTML = 0;
 
     // clears deck to start before redrawing.
     // Remove ChildrenNodes - StackOverflow --> https://bit.ly/2Hmw67R
