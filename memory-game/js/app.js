@@ -14,6 +14,13 @@ const moves = document.querySelector('.moves');
 
 reset_button.addEventListener('click', playGame);
 
+playGame();
+/*
+ * Display the cards on the page
+ *   - shuffle the list of cards using the provided "shuffle" method below
+ *   - loop through each card and create its HTML
+ *   - add each card's HTML to the page
+ */
 function createDeck() {
     // clears deck to start before redrawing.
     // Remove ChildrenNodes - StackOverflow --> https://bit.ly/2Hmw67R
@@ -33,15 +40,6 @@ function createDeck() {
         const addNewCard = deck.appendChild(newCard);
     }
 }
-/*
- * Display the cards on the page
- *   - shuffle the list of cards using the provided "shuffle" method below
- *   - loop through each card and create its HTML
- *   - add each card's HTML to the page
- */
-playGame();
-
-
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
