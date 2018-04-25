@@ -11,6 +11,8 @@ let card_names = ["fa fa-diamond", "fa fa-paper-plane-o", "fa fa-anchor", "fa fa
 const deck = document.getElementById('mainDeck');
 const reset_button = document.querySelector('.restart');
 const moves = document.querySelector('.moves');
+const starTwo = document.getElementById('star-two');
+const starThree = document.getElementById('star-three');
 
 reset_button.addEventListener('click', playGame);
 
@@ -78,6 +80,14 @@ deck.addEventListener('click', function(event) {
     move_count += 1;
     moves.innerHTML = move_count;
 
+    if (move_count === 16) {
+
+    } else if (move_count > 16 && move_count <= 25) {
+          starTwo.remove();
+    } else if (move_count > 25) {
+          starThree.remove(); 
+    }
+
     event.target.classList.add('open');
     event.target.classList.add('show');
 
@@ -86,7 +96,9 @@ deck.addEventListener('click', function(event) {
         event.target.classList.remove('show');
     }, 1150);
 
-    console.log(event.target);
+
+
+
 });
 
 //  increasing move counter
