@@ -134,6 +134,7 @@ reset_button.addEventListener('click', playGame);
 
 
 function playGame() {
+    // startGameClock();
     // shuffles the order of the cards to begin.
     shuffle(card_names);
     //Resets the move counter and displayed number of moves.
@@ -141,4 +142,38 @@ function playGame() {
     moves.innerHTML = 0;
     createDeck();
 }
+
+
+// clock logic 
+// function startGameClock() {
+//     var min = 0;
+//     var sec = 0;
+//     var hours = 0;
+//     var letsStop = 0;
+//     let timerBlock = document.querySelector('.timer');
+
+//     setInterval(function() {
+//         if (letsStop !== 1) {
+//             sec++;
+//             if (sec === 60) {
+//                 min++;
+//                 sec = 0;
+//             }
+//             if (min === 60) {
+//                 hours++;
+//                 min = 0;
+//                 sec = 0;
+//             }
+//             timerBlock.innerHTML = (hours + ':' + min + ':' + sec);
+//             // if(letsStop === 1)
+//             // {
+//             //     break;
+//             // } 
+//             console.log(min);
+//             console.log(sec);
+//         }
+
+//     }, 1000);
+// }
+
 
