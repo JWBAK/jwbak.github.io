@@ -86,13 +86,18 @@ function increaseMoveCount() {
  // adds click eventListener to <ul> rather than each individual card.
 deck.addEventListener('click', function(event) {
 
+    // stops user from just clicking on 1 card twice to "match" it.
+    if (event.target.classList.contains('open')) { 
+        return; 
+    }
+
     event.target.classList.add('open');
     event.target.classList.add('show');
 
     setTimeout( function() {
         event.target.classList.remove('open');
         event.target.classList.remove('show');
-    }, 1150);
+    }, 1000);
 
     open_cards.push(event.target);
 
@@ -101,6 +106,10 @@ deck.addEventListener('click', function(event) {
         open_cards[1].classList.add('match');
 
         matched_pairs += 1;
+
+        if(matched_pairs === 8) {
+            showModal();
+        }
     }
 
     increaseMoveCount();
@@ -118,7 +127,11 @@ deck.addEventListener('click', function(event) {
 // Reset Game
 reset_button.addEventListener('click', playGame);
 
-
+// Winning Modal
+function showModal() {
+    let modal = document.getElementById('win-modal');
+    modal.style.display = "block";
+};
 
 
 function playGame() {
