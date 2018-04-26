@@ -97,6 +97,26 @@ deck.addEventListener('click', function(event) {
     }, 1150);
 
 
+    open_cards.push(event.target);
+
+    if(open_cards[0].firstChild.className === open_cards[1].firstChild.className) {
+        open_cards[0].classList.add('match');
+        open_cards[1].classList.add('match');
+
+        matched_pairs += 1;
+    }
+
+    open_cards.pop();
+    open_cards.pop();
+
+    console.log(open_cards[0]);
+
+    // if (matched_pairs === 4) {
+    //   winGame();
+    // }
+
+
+    
 
 
 });
