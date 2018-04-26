@@ -58,11 +58,19 @@ function shuffle(array) {
 }
 
 
-    //  card.addEventListener('click', function(event) {
-    //     event.target.classList.toggle('open');
-    //     event.target.classList.toggle('show');
-    // });
+// increases move count: 1 click === 1 move
+function increaseMoveCount() {
+    move_count += 1;
+    moves.innerHTML = move_count;
 
+    if (move_count === 16) {
+
+    } else if (move_count > 16 && move_count <= 25) {
+          starTwo.remove();
+    } else if (move_count > 25) {
+          starThree.remove(); 
+    }
+}
 
 /*
  * set up the event listener for a card. If a card is clicked:
@@ -77,16 +85,6 @@ function shuffle(array) {
 
  // adds click eventListener to <ul> rather than each individual card.
 deck.addEventListener('click', function(event) {
-    move_count += 1;
-    moves.innerHTML = move_count;
-
-    if (move_count === 16) {
-
-    } else if (move_count > 16 && move_count <= 25) {
-          starTwo.remove();
-    } else if (move_count > 25) {
-          starThree.remove(); 
-    }
 
     event.target.classList.add('open');
     event.target.classList.add('show');
@@ -95,6 +93,8 @@ deck.addEventListener('click', function(event) {
         event.target.classList.remove('open');
         event.target.classList.remove('show');
     }, 1150);
+
+    increaseMoveCount();
 
 
     open_cards.push(event.target);
