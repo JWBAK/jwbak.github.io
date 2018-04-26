@@ -101,24 +101,12 @@ deck.addEventListener('click', function(event) {
         open_cards[1].classList.add('match');
 
         matched_pairs += 1;
-
     }
 
     increaseMoveCount();
 
     open_cards.pop();
     open_cards.pop();
-
-    console.log(open_cards[0]);
-
-    // if (matched_pairs === 4) {
-    //   winGame();
-    // }
-
-
-    
-
-
 });
 
 //  increasing move counter
