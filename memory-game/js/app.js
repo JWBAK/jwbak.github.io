@@ -58,7 +58,7 @@ function shuffle(array) {
 }
 
 
-// increases move count: 1 click === 1 move
+// increases move count: 2 clicks === 1 move
 function increaseMoveCount() {
     move_count += 1;
     moves.innerHTML = move_count;
@@ -94,9 +94,6 @@ deck.addEventListener('click', function(event) {
         event.target.classList.remove('show');
     }, 1150);
 
-    increaseMoveCount();
-
-
     open_cards.push(event.target);
 
     if(open_cards[0].firstChild.className === open_cards[1].firstChild.className) {
@@ -104,7 +101,10 @@ deck.addEventListener('click', function(event) {
         open_cards[1].classList.add('match');
 
         matched_pairs += 1;
+
     }
+
+    increaseMoveCount();
 
     open_cards.pop();
     open_cards.pop();
