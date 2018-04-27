@@ -3,7 +3,6 @@
  */
 let card_names = ["fa fa-diamond", "fa fa-paper-plane-o", "fa fa-anchor", "fa fa-bolt", "fa fa-cube", "fa fa-anchor", "fa fa-leaf", "fa fa-bicycle", "fa fa-diamond", "fa fa-bomb", "fa fa-leaf", "fa fa-bomb", "fa fa-bolt", "fa fa-bicycle", "fa fa-paper-plane-o", "fa fa-cube"],
     open_cards = [],
-    card_deck = [],
     move_count = 0,
     matched_pairs = 0,
     game_started = false;
@@ -88,6 +87,8 @@ function increaseMoveCount() {
  // adds click eventListener to <ul> rather than each individual card.
 deck.addEventListener('click', function(event) {
 
+
+
     // stops user from just clicking on 1 card twice to "match" it.
     if (event.target.classList.contains('open')) { 
         return; 
@@ -101,7 +102,10 @@ deck.addEventListener('click', function(event) {
         event.target.classList.remove('show');
     }, 1000);
 
+
     open_cards.push(event.target);
+
+
 
     if(open_cards[0].firstChild.className === open_cards[1].firstChild.className) {
         open_cards[0].classList.add('match');
