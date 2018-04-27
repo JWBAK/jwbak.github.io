@@ -10,11 +10,13 @@ let card_names = ["fa fa-diamond", "fa fa-paper-plane-o", "fa fa-anchor", "fa fa
 
 const deck = document.getElementById('mainDeck');
 const reset_button = document.querySelector('.restart');
+const play_again = document.querySelector('.play-again');
 const moves = document.querySelector('.moves');
 const starTwo = document.getElementById('star-two');
 const starThree = document.getElementById('star-three');
 
 reset_button.addEventListener('click', playGame);
+// play_again.addEventListener('click', playGame);
 
 playGame();
 /*
