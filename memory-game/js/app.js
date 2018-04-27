@@ -118,12 +118,6 @@ deck.addEventListener('click', function(event) {
     open_cards.pop();
 });
 
-//  increasing move counter
-// span .moves .innerHtml ++
-
-//classes for code
-// open, show, match
-
 // Reset Game
 reset_button.addEventListener('click', playGame);
 
