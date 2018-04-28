@@ -87,8 +87,6 @@ function increaseMoveCount() {
  // adds click eventListener to <ul> rather than each individual card.
 deck.addEventListener('click', function(event) {
 
-
-
     // stops user from just clicking on 1 card twice to "match" it.
     if (event.target.classList.contains('open')) { 
         return; 
