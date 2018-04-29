@@ -100,8 +100,8 @@ deck.addEventListener('click', function(event) {
         event.target.classList.remove('show');
     }, 1000);
 
-    open_cards.push(event.target)
-    | ;
+    open_cards.push(event.target);
+    
     if(open_cards[0].firstChild.className === open_cards[1].firstChild.className) {
         open_cards[0].classList.add('match');
         open_cards[1].classList.add('match');
@@ -121,6 +121,8 @@ deck.addEventListener('click', function(event) {
     open_cards.pop();
 });
 
+// Reset Game
+reset_button.addEventListener('click', playGame);
 
 // Winning Modal
 function showModal() {
