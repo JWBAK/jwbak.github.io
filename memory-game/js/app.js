@@ -73,19 +73,54 @@ function increaseMoveCount() {
     }
 }
 
-/*
- * set up the event listener for a card. If a card is clicked:
- *  - display the card's symbol (put this functionality in another function that you call from this one)
- *  - add the card to a *list* of "open" cards (put this functionality in another function that you call from this one)
- *  - if the list already has another card, check to see if the two cards match
- *    + if the cards do match, lock the cards in the open position (put this functionality in another function that you call from this one)
- *    + if the cards do not match, remove the cards from the list and hide the card's symbol (put this functionality in another function that you call from this one)
- *    + increment the move counter and display it on the page (put this functionality in another function that you call from this one)
- *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
- */
+function flipOver() {
+  event.target.classList.add('open');
+  event.target.classList.add('show');
+}
+
+function addToOpenArray() {
+  open_cards.push(event.target);
+}
+
+
+ // * set up the event listener for a card. If a card is clicked:
+    deck.addEventListener('click', function(event) {
+
+ // *  - display the card's symbol (put this functionality in another function that you call from this one)
+
+        flipOver();
+
+ // *  - add the card to a *list* of "open" cards (put this functionality in another function that you call from this one)
+
+        addToOpenArray();
+
+ // *  - if the list already has another card, check to see if the two cards match
+
+      if (open_cards.length > 1) {
+          if(open_cards[0].firstChild.className === open_cards[1].firstChild.className) {
+            open_cards[0].classList.add('match');
+            open_cards[1].classList.add('match');
+          }
+      }
+
+
+ // *    + if the cards do match, lock the cards in the open position (put this functionality in another function that you call from this one)
+
+
+ // *    + if the cards do not match, remove the cards from the list and hide the card's symbol (put this functionality in another function that you call from this one)
+
+
+ // *    + increment the move counter and display it on the page (put this functionality in another function that you call from this one)
+
+          increaseMoveCount();
+
+ // *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
+
+          showModal();
+ });
 
  // adds click eventListener to <ul> rather than each individual card.
-deck.addEventListener('click', function(event) {
+
 
     // stops user from just clicking on 1 card twice to "match" it.
     if (event.target.classList.contains('open')) { 
@@ -100,8 +135,11 @@ deck.addEventListener('click', function(event) {
         event.target.classList.remove('show');
     }, 1000);
 
-    open_cards.push(event.target);
+
     
+
+
+
     if(open_cards[0].firstChild.className === open_cards[1].firstChild.className) {
         open_cards[0].classList.add('match');
         open_cards[1].classList.add('match');
@@ -113,13 +151,10 @@ deck.addEventListener('click', function(event) {
         }
     }
 
-
-
     increaseMoveCount();
 
     open_cards.pop();
     open_cards.pop();
-});
 
 // Reset Game
 reset_button.addEventListener('click', playGame);
