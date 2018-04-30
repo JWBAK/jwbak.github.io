@@ -24,10 +24,6 @@ playGame();
  *   - loop through each card and create its HTML
  *   - add each card's HTML to the page
  */
-
-
-
-
 function createDeck() {
     // clears deck to start before redrawing.
     // Remove ChildrenNodes - StackOverflow --> https://bit.ly/2Hmw67R
@@ -47,6 +43,7 @@ function createDeck() {
         const addNewCard = deck.appendChild(newCard);
     }
 }
+
 
 // Shuffle function from http://stackoverflow.com/a/2450976
 function shuffle(array) {
@@ -92,28 +89,27 @@ deck.addEventListener('click', function(event) {
  // *  - display the card's symbol (put this functionality in another function that you call from this one)
     flipOver();
 
+    // stops user from just clicking on 1 card twice to "match" it.
     if (event.target.classList.contains('open')) { 
         return; 
     }
  // *  - add the card to a *list* of "open" cards (put this functionality in another function that you call from this one)
     addToOpenArray();
  // *  - if the list already has another card, check to see if the two cards match
+  // *    + if the cards do match, lock the cards in the open position (put this functionality in another function that you call from this one)
     if (open_cards.length > 1) {
         if(open_cards[0].firstChild.className === open_cards[1].firstChild.className) {
             open_cards[0].classList.add('match');
             open_cards[1].classList.add('match');
 
             matched_pairs += 1;
-
+// *    + if the cards do not match, remove the cards from the list and hide the card's symbol (put this functionality in another function that you call from this one)
         } else {
             event.target.classList.remove('open');
             event.target.classList.remove('show');
-
-            open_cards = [];
         }
+        open_cards = [];
     }
- // *    + if the cards do match, lock the cards in the open position (put this functionality in another function that you call from this one)
- // *    + if the cards do not match, remove the cards from the list and hide the card's symbol (put this functionality in another function that you call from this one)
  // *    + increment the move counter and display it on the page (put this functionality in another function that you call from this one)
     increaseMoveCount();
  // *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
@@ -123,9 +119,6 @@ deck.addEventListener('click', function(event) {
  });
 
  
-    // stops user from just clicking on 1 card twice to "match" it.
-    
-
 // Winning Modal
 function showModal() {
     let modal = document.getElementById('win-modal');
