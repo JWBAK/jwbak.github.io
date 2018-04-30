@@ -24,6 +24,10 @@ playGame();
  *   - loop through each card and create its HTML
  *   - add each card's HTML to the page
  */
+
+
+
+
 function createDeck() {
     // clears deck to start before redrawing.
     // Remove ChildrenNodes - StackOverflow --> https://bit.ly/2Hmw67R
@@ -82,82 +86,45 @@ function addToOpenArray() {
   open_cards.push(event.target);
 }
 
-
+// adds click eventListener to <ul> rather than each individual card.
  // * set up the event listener for a card. If a card is clicked:
-    deck.addEventListener('click', function(event) {
-
+deck.addEventListener('click', function(event) {
  // *  - display the card's symbol (put this functionality in another function that you call from this one)
+    flipOver();
 
-        flipOver();
-
- // *  - add the card to a *list* of "open" cards (put this functionality in another function that you call from this one)
-
-        addToOpenArray();
-
- // *  - if the list already has another card, check to see if the two cards match
-
-      if (open_cards.length > 1) {
-          if(open_cards[0].firstChild.className === open_cards[1].firstChild.className) {
-            open_cards[0].classList.add('match');
-            open_cards[1].classList.add('match');
-          }
-      }
-
-
- // *    + if the cards do match, lock the cards in the open position (put this functionality in another function that you call from this one)
-
-
- // *    + if the cards do not match, remove the cards from the list and hide the card's symbol (put this functionality in another function that you call from this one)
-
-
- // *    + increment the move counter and display it on the page (put this functionality in another function that you call from this one)
-
-          increaseMoveCount();
-
- // *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
-
-          showModal();
- });
-
- // adds click eventListener to <ul> rather than each individual card.
-
-
-    // stops user from just clicking on 1 card twice to "match" it.
     if (event.target.classList.contains('open')) { 
         return; 
     }
+ // *  - add the card to a *list* of "open" cards (put this functionality in another function that you call from this one)
+    addToOpenArray();
+ // *  - if the list already has another card, check to see if the two cards match
+    if (open_cards.length > 1) {
+        if(open_cards[0].firstChild.className === open_cards[1].firstChild.className) {
+            open_cards[0].classList.add('match');
+            open_cards[1].classList.add('match');
 
-    event.target.classList.add('open');
-    event.target.classList.add('show');
+            matched_pairs += 1;
 
-    setTimeout( function() {
-        event.target.classList.remove('open');
-        event.target.classList.remove('show');
-    }, 1000);
+        } else {
+            event.target.classList.remove('open');
+            event.target.classList.remove('show');
 
-
-    
-
-
-
-    if(open_cards[0].firstChild.className === open_cards[1].firstChild.className) {
-        open_cards[0].classList.add('match');
-        open_cards[1].classList.add('match');
-
-        matched_pairs += 1;
-
-        if(matched_pairs === 8) {
-            showModal();
+            open_cards = [];
         }
     }
-
+ // *    + if the cards do match, lock the cards in the open position (put this functionality in another function that you call from this one)
+ // *    + if the cards do not match, remove the cards from the list and hide the card's symbol (put this functionality in another function that you call from this one)
+ // *    + increment the move counter and display it on the page (put this functionality in another function that you call from this one)
     increaseMoveCount();
+ // *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
+    if(matched_pairs === 8) {
+        showModal();
+    }
+ });
 
-    open_cards.pop();
-    open_cards.pop();
-
-// Reset Game
-reset_button.addEventListener('click', playGame);
+ 
+    // stops user from just clicking on 1 card twice to "match" it.
+    
 
 // Winning Modal
 function showModal() {
@@ -168,12 +135,12 @@ function showModal() {
 
 function playGame() {
     // startGameClock();
+    createDeck();
     // shuffles the order of the cards to begin.
     shuffle(card_names);
     //Resets the move counter and displayed number of moves.
     move_count = 0;
     moves.innerHTML = 0;
-    createDeck();
 }
 
 
