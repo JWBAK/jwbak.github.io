@@ -127,13 +127,13 @@ function showModal() {
 
 
 function playGame() {
-    // startGameClock();
-    createDeck();
-    // shuffles the order of the cards to begin.
-    shuffle(card_names);
-    //Resets the move counter and displayed number of moves.
-    move_count = 0;
-    moves.innerHTML = 0;
+  // shuffles the order of the cards to begin.
+  shuffle(card_names);
+  // startGameClock();
+  createDeck();
+  //Resets the move counter and displayed number of moves.
+  move_count = 0;
+  moves.innerHTML = 0;
 }
 
 
