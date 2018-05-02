@@ -188,7 +188,6 @@ function resetGame(){
   move_count = 0;
   moves.innerHTML = 0;
   matched_pairs = 0;
-  scoreDisplay.innerHTML = 0;
   starOne.style.display = "block";
   starTwo.style.display = "block";
   starThree.style.display = "block";
