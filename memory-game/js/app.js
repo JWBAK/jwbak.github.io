@@ -103,8 +103,10 @@ deck.addEventListener('click', function(event) {
     
     if (open_cards.length > 1) {
         if(open_cards[0] === open_cards[1] ) {
-                increaseScore();
+                increaseScore();  
                 setTimeout(function(){
+                shown_cards[0].classList.add('grow');
+                shown_cards[1].classList.add('grow');     
                 shown_cards[0].classList.add('match');
                 shown_cards[1].classList.add('match');
                 open_cards = [];
