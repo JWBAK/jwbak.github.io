@@ -80,23 +80,26 @@ function flipOver() {
  // * set up the event listener for a card. If a card is clicked:
 deck.addEventListener('click', function(event) {
  // *  - display the card's symbol (put this functionality in another function that you call from this one)
-  if (event.target.className === "card"){
-    totalClicks += 1;
-    increaseMoveCount();
-  }
 // stops user from just double-clicking a single card to obtain match event.
   if (event.target.classList.contains('open')) { 
       return; 
   }
   
-  if(totalClicks <= 2) {
-  flipOver();
+  if(totalClicks < 2) {
+    if (event.target.className === "card"){
+        totalClicks += 1;
+        flipOver();
+        if (totalClicks === 2){
+            increaseMoveCount();
+        }
+    }
 
  // *  - display the card's symbol (put this functionality in another function that you call from this one)
  // *  + increment the move counter and display it on the page (put this functionality in another function that you call from this one)
     if(open_cards.length != 2 && event.target.className === "card open show" && shown_cards.length != 2) {
         open_cards.push(event.target.childNodes[0].className);
         shown_cards.push(event.target);
+    }
     
     if (open_cards.length > 1) {
         if(open_cards[0] === open_cards[1] ) {
@@ -128,7 +131,6 @@ deck.addEventListener('click', function(event) {
           showModal();
         }
     }
-  }
  });
 
 // increases move count: 1 clicks = 1 move.
@@ -136,15 +138,12 @@ function increaseMoveCount() {
     move_count += 1;
     moves.innerHTML = move_count;
 
-    if (move_count === 18) {
+    if (move_count === 15) {
       starOne.style.display = "none";
       num_stars -= 1;
-    } else if (move_count === 25) {
+    } else if (move_count === 30) {
         starTwo.style.display = "none";
         num_stars -= 1;
-    } else if (move_count === 36) {
-        starThree.style.display = "none";
-        num_stars -= 1; 
     }
 }
 
