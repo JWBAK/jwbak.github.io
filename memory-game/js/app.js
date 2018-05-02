@@ -29,8 +29,7 @@ endTime = document.getElementById('endTime');
 reset_button.addEventListener('click', resetGame);
 play_again.addEventListener('click', playAgain);
 
-//display the matched pairs from the start
-
+// Initial start of game on pageLoad.
 playGame();
 
 
