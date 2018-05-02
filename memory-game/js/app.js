@@ -113,11 +113,15 @@ deck.addEventListener('click', function(event) {
             }, 110);
 // *    + if the cards do not match, remove the cards from the list and hide the card's symbol (put this functionality in another function that you call from this one)
         } else if (open_cards[0] != open_cards[1]) {
-            setTimeout(function(){
+            shown_cards[0].classList.add('wobble');
+            shown_cards[1].classList.add('wobble'); 
+            setTimeout(function(){   
             shown_cards[0].classList.remove('open');
             shown_cards[0].classList.remove('show');
             shown_cards[1].classList.remove('open');
             shown_cards[1].classList.remove('show');
+            shown_cards[0].classList.remove('wobble');
+            shown_cards[1].classList.remove('wobble'); 
             open_cards = [];
             shown_cards = [];
             totalClicks = 0;
