@@ -30,7 +30,6 @@ reset_button.addEventListener('click', resetGame);
 play_again.addEventListener('click', playAgain);
 
 //display the matched pairs from the start
-scoreDisplay.innerHTML = matched_pairs;
 
 playGame();
 
@@ -76,6 +75,10 @@ function flipOver() {
   event.target.classList.add('show');
 }
 
+function increaseScore(){
+    matched_pairs += 1;
+}
+
 
  // * set up the event listener for a card. If a card is clicked:
 deck.addEventListener('click', function(event) {
@@ -103,7 +106,7 @@ deck.addEventListener('click', function(event) {
     
     if (open_cards.length > 1) {
         if(open_cards[0] === open_cards[1] ) {
-                increaseScore();  
+                increaseScore();
                 setTimeout(function(){
                 shown_cards[0].classList.add('grow');
                 shown_cards[1].classList.add('grow');     
@@ -154,9 +157,6 @@ function increaseMoveCount() {
 }
 
  
-function increaseScore(){
-    matched_pairs += 1;
-}
 
 // Winning Modal
 function showModal() {
