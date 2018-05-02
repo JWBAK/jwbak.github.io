@@ -99,7 +99,7 @@ deck.addEventListener('click', function(event) {
         shown_cards.push(event.target);
     }
     
-    // Checks to see if cards match, only once more than 1 card has been turned over.
+    // Checks to see if cards match, only when more than 1 card has been turned over.
     if (open_cards.length > 1) {
         if(open_cards[0] === open_cards[1] ) {
                 increaseScore();
