@@ -30,7 +30,7 @@ reset_button.addEventListener('click', resetGame);
 play_again.addEventListener('click', playAgain);
 
 //display the matched pairs from the start
-scoreDisplay.innerHTML = matched_pairs;
+matched_pairs = scoreDisplay.innerHTML;
 
 playGame();
 
