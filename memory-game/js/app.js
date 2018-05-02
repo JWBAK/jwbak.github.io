@@ -5,7 +5,7 @@ let card_names = ["fa fa-diamond", "fa fa-paper-plane-o", "fa fa-anchor", "fa fa
     shown_cards = [],
     move_count = 0,
     matched_pairs = 0,
-    totalClicks = 0,
+    total_clicks = 0,
     game_started = false;
     
 let timer = 0;
@@ -16,14 +16,14 @@ const deck = document.getElementById('mainDeck');
 const reset_button = document.querySelector('.restart');
 const play_again = document.querySelector('.play-again');
 const moves = document.querySelector('.moves');
-const endMoves = document.getElementById('finalMoves');
-const starOne = document.getElementById('star-one');
-const starTwo = document.getElementById('star-two');
-const starThree = document.getElementById('star-three');
-const starLine = document.getElementById('stars');
-const scoreDisplay = document.getElementById('show-score');
+const end_moves = document.getElementById('finalMoves');
+const star_one = document.getElementById('star-one');
+const star_two = document.getElementById('star-two');
+const star_three = document.getElementById('star-three');
+const star_line = document.getElementById('stars');
+const score_display = document.getElementById('show-score');
 const modal = document.getElementById('win-modal');
-const starNums = document.getElementById('num-stars');
+const numberOfStars = document.getElementById('num-stars');
 const endTime = document.getElementById('endTime');
 
 reset_button.addEventListener('click', resetGame);
@@ -74,36 +74,33 @@ function flipOver() {
   event.target.classList.add('open');
   event.target.classList.add('show');
 }
-
+// Function to increase counter for matched pairs. Game is over when this number reaches 8 total.
 function increaseScore(){
     matched_pairs += 1;
 }
 
 
- // * set up the event listener for a card. If a card is clicked:
+ // * Event listener for a card.
 deck.addEventListener('click', function(event) {
- // *  - display the card's symbol (put this functionality in another function that you call from this one)
 // stops user from just double-clicking a single card to obtain match event.
   if (event.target.classList.contains('open')) { 
       return; 
   }
-  
-  if(totalClicks < 2) {
+  if(total_clicks < 2) {
     if (event.target.className === "card"){
-        totalClicks += 1;
+        total_clicks += 1;
         flipOver();
-        if (totalClicks === 2){
+        if (total_clicks === 2){
             increaseMoveCount();
         }
     }
 
- // *  - display the card's symbol (put this functionality in another function that you call from this one)
- // *  + increment the move counter and display it on the page (put this functionality in another function that you call from this one)
     if(open_cards.length != 2 && event.target.className === "card open show" && shown_cards.length != 2) {
         open_cards.push(event.target.childNodes[0].className);
         shown_cards.push(event.target);
     }
     
+    // Checks to see if cards match, only once more than 1 card has been turned over.
     if (open_cards.length > 1) {
         if(open_cards[0] === open_cards[1] ) {
                 increaseScore();
@@ -114,9 +111,9 @@ deck.addEventListener('click', function(event) {
                 shown_cards[1].classList.add('match');
                 open_cards = [];
                 shown_cards = [];
-                totalClicks = 0;
+                total_clicks = 0;
             }, 110);
-// *    + if the cards do not match, remove the cards from the list and hide the card's symbol (put this functionality in another function that you call from this one)
+
         } else if (open_cards[0] != open_cards[1]) {
             shown_cards[0].classList.add('wobble');
             shown_cards[1].classList.add('wobble'); 
@@ -129,44 +126,41 @@ deck.addEventListener('click', function(event) {
             shown_cards[1].classList.remove('wobble'); 
             open_cards = [];
             shown_cards = [];
-            totalClicks = 0;
+            total_clicks = 0;
             }, 600);
         }
     }   
-
+// Game Over Modal upon matching all cards. Stops timer.
    if(matched_pairs === 8) {
-          // clearInterval(myVar);
           clearTimeout(timePTR);
           showModal();
         }
     }
  });
 
-// increases move count: 1 clicks = 1 move.
+// function to increases move count: 1 click = 1 move.
 function increaseMoveCount() {
     move_count += 1;
     moves.innerHTML = move_count;
 
     if (move_count === 15) {
-      starOne.style.display = "none";
+      star_one.style.display = "none";
       num_stars -= 1;
     } else if (move_count === 30) {
-        starTwo.style.display = "none";
+        star_two.style.display = "none";
         num_stars -= 1;
     }
 }
 
- 
-
 // Winning Modal
 function showModal() {
   modal.style.display = "block";
-  starNums.innerHTML = num_stars;
-  endMoves.innerHTML = move_count;
+  numberOfStars.innerHTML = num_stars;
+  end_moves.innerHTML = move_count;
   endTime.innerHTML = timer;
 };
 
-
+// Function to play game.
 function playGame() {
   startTimer();
   shuffle(card_names);
@@ -176,29 +170,28 @@ function playGame() {
   modal.style.display = "none";
 }
 
-
+// Function to reset entire game without the need for a page refresh.
 function resetGame(){
   timer = 0;
   num_stars = 3;
   clearTimeout(timePTR);
   document.getElementById('timer').innerHTML = 0;
- 
   playGame();
-
   move_count = 0;
   moves.innerHTML = 0;
   matched_pairs = 0;
-  starOne.style.display = "block";
-  starTwo.style.display = "block";
-  starThree.style.display = "block";
-         
+  star_one.style.display = "block";
+  star_two.style.display = "block";
+  star_three.style.display = "block";   
 }
 
+// Allows user to reset the game and play again. (Message displayed on the winning modal.)
 function playAgain(){
     resetGame();
     modal.style.display = "none";
 }
 
+// Function to start game timer.
 function startTimer(){
     timer += 1;
     document.getElementById("timer").innerHTML = timer;
