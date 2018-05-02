@@ -12,19 +12,19 @@ let timer = 0;
 let timePTR;
 num_stars = 3;
 
-const deck = document.getElementById('mainDeck');
-const reset_button = document.querySelector('.restart');
-const play_again = document.querySelector('.play-again');
-const moves = document.querySelector('.moves');
-const end_moves = document.getElementById('finalMoves');
-const star_one = document.getElementById('star-one');
-const star_two = document.getElementById('star-two');
-const star_three = document.getElementById('star-three');
-const star_line = document.getElementById('stars');
-const score_display = document.getElementById('show-score');
-const modal = document.getElementById('win-modal');
-const numberOfStars = document.getElementById('num-stars');
-const endTime = document.getElementById('endTime');
+const deck = document.getElementById('mainDeck'),
+reset_button = document.querySelector('.restart'),
+play_again = document.querySelector('.play-again'),
+moves = document.querySelector('.moves'),
+end_moves = document.getElementById('finalMoves'),
+star_one = document.getElementById('star-one'),
+star_two = document.getElementById('star-two'),
+star_three = document.getElementById('star-three'),
+star_line = document.getElementById('stars'),
+core_display = document.getElementById('show-score'),
+modal = document.getElementById('win-modal'),
+numberOfStars = document.getElementById('num-stars'),
+endTime = document.getElementById('endTime');
 
 reset_button.addEventListener('click', resetGame);
 play_again.addEventListener('click', playAgain);
