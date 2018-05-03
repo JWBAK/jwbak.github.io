@@ -17,7 +17,8 @@ body {
 }
 
 body {
-    background: #ffffff url('../img/background.png'); /* Background pattern from Subtle Patterns */
+    /* Background pattern from (https://trianglify.io/) */
+    background: #ffffff url('../img/background.png');
     font-family: 'Coda', cursive;
 }
 
@@ -33,7 +34,7 @@ h1 {
     font-weight: 300;
 }
 
-/*
+/**
  * Styles for the deck of cards
  */
 
@@ -81,7 +82,7 @@ h1 {
     font-size: 33px;
 }
 
-/*
+/**
  * Styles for the Score Panel
  */
 
@@ -108,7 +109,9 @@ h1 {
     cursor: pointer;
 }
 
-/* Winning Modal Styles */
+/**
+* Winning Modal Styles 
+*/
 .modal {
     display: none;
     position: fixed;
@@ -134,9 +137,11 @@ h1 {
     text-align: center;
 }
 
-/* Animations */
-
-/* Shake Example taken from (https://css-tricks.com/snippets/css/shake-css-keyframe-animation/) */
+/**
+Animations
+------------
+Shake Example taken from (https://css-tricks.com/snippets/css/shake-css-keyframe-animation/) 
+*/
 .wobble {
     animation: shake 0.6s cubic-bezier(.36,.07,.19,.97) both;
     transform: translate3d(0, 0, 0);
