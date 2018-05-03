@@ -7,7 +7,7 @@ let card_names = ["fa fa-diamond", "fa fa-paper-plane-o", "fa fa-anchor", "fa fa
     matched_pairs = 0,
     total_clicks = 0,
     game_started = false;
-    
+
 let timer = 0;
 let timePTR;
 num_stars = 3;
@@ -82,7 +82,7 @@ function increaseScore(){
  // * Event listener for a card.
 deck.addEventListener('click', function(event) {
 // stops user from just double-clicking a single card to obtain match event.
-  if (event.target.classList.contains('open')) { 
+  if (event.target.classList.contains('open')) {
       return; 
   }
   if(total_clicks < 2) {
@@ -98,14 +98,13 @@ deck.addEventListener('click', function(event) {
         open_cards.push(event.target.childNodes[0].className);
         shown_cards.push(event.target);
     }
-    
     // Checks to see if cards match, only when more than 1 card has been turned over.
     if (open_cards.length > 1) {
         if(open_cards[0] === open_cards[1] ) {
                 increaseScore();
                 setTimeout(function(){
                 shown_cards[0].classList.add('grow');
-                shown_cards[1].classList.add('grow');     
+                shown_cards[1].classList.add('grow');
                 shown_cards[0].classList.add('match');
                 shown_cards[1].classList.add('match');
                 open_cards = [];
@@ -122,13 +121,13 @@ deck.addEventListener('click', function(event) {
             shown_cards[1].classList.remove('open');
             shown_cards[1].classList.remove('show');
             shown_cards[0].classList.remove('wobble');
-            shown_cards[1].classList.remove('wobble'); 
+            shown_cards[1].classList.remove('wobble');
             open_cards = [];
             shown_cards = [];
             total_clicks = 0;
             }, 600);
         }
-    }   
+    }
 // Game Over Modal upon matching all cards. Stops timer.
    if(matched_pairs === 8) {
           clearTimeout(timePTR);
